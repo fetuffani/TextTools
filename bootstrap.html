@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+		<head>
+				<meta charset="UTF-8">
+				<meta name="viewport" content="width=device-width, initial-scale=1.0">
+				<meta http-equiv="X-UA-Compatible" content="ie=edge">
+				<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+				<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+				<title>EasyTextTools</title>
+				<script type="text/javascript" src="./js/script.js"></script>
+
+		</head>
+
+	<body onload="pageLoad()">
+		<div id="nav-wrapper container" style="margin-bottom: 50px;">
+			<nav class="navbar navbar-dark bg-dark navbar-expand-lg">
+				<a href="#" class="navbar-brand">EasyTextTools</a>
+				
+				<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				
+				<div class="navbar-collapse collapse mx-auto" id="navbar">
+					<ul class="navbar-nav">
+						<li class="nav-item"><a href="./index.html" class="nav-link">Pure Version</a></li>
+						<li class="nav-item"><a href="./bootstrap.html" class="nav-link">Bootstrap Version</a></li>
+						<li class="nav-item"><a href="#" class="nav-link">About</a></li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+
+		<div class="main-wrapper container">
+			<h3 class="justify-content-center d-flex">Select the desired transformation</h3>
+			<div class="opcoes-wrapper container">
+				<div id="opcoes-bootstrap" class="justify-content-center d-flex flex-wrap">
+					<!-- <div class="card" style="width: 18rem;">
+						<div class="card-body">
+							<h5 class="card-title">Card title</h5>
+							<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+						</div>
+					</div> -->
+				</div>
+			</div>
+
+			<div class="transformada-wrapper container container-flex d-flex justify-content-center mb-3">
+				<div id="transformada-area" class="transformada-area container">
+					<div id="transformada-titulo" class="transformada-titulo"></div>
+					<h3 id="" class="justify-content-center d-flex">Select the desired transformation</h3>
+
+					<label for="exampleFormControlTextarea1">Input text</label>
+					<textarea id="entrada-texto" class="form-control" type="text" placeholder="enter your text here" oninput="transformInput()" rows="5"></textarea>
+					<label for="exampleFormControlTextarea1">Output Text</label>
+					<textarea id="entrada-transformada" class="form-control" type="text"  rows="5" readonly="readonly"></textarea>
+
+					<div class="mt-3"> 
+						<button type="button" class="btn btn-light btn-clipboard" data-clipboard-action="copy" data-clipboard-target="#entrada-transformada" onclick="copyToClipboard()">Copy</button>  
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+		<footer class="text-center text-light bg-dark">			
+			<!-- Copyright -->
+			<div class="text-center p-3"">
+			  © 2021 Copyright: FMT
+			</div>
+			<!-- Copyright -->
+		  </footer>
+	</body>
+</html>
